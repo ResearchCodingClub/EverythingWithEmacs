@@ -9,7 +9,12 @@ all: $(OBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $^ -o $@
 
-.PHONY: clean
+.PHONY: clean tags
 
 clean:
 	rm -rf ./*.o ./hello
+
+tags: TAGS
+
+TAGS:
+	etags *.c *.h
