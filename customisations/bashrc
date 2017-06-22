@@ -1,0 +1,31 @@
+# -*- mode: shell-script; -*-
+
+# Open files in existing Emacs session
+export EDITOR=emacsclient
+
+# Make a fancy prompt play nice with TRAMP
+case "$TERM" in
+        "dumb")
+                PS1="> "
+                ;;
+        xterm*|rxvt*|eterm*|screen*)
+                PS1="\[$BC_BLACK\][\t]\[$BC_RED\] \u@\[$hostcolour\]\h \[$BC_GREEN\]\w:\[$BC_RESET\] "
+                ;;
+        *)
+                PS="> "
+                ;;
+esac
+
+# Export environment variables to emacs
+# Use like export-emacs PATH LD_LIBRARY_PATH
+# From http://emacs.stackexchange.com/a/13232/2659
+function export-emacs {
+    if [ "$(emacsclient -e t)" != 't' ]; then
+        return 1
+    fi
+
+    for name in "${@}"; do
+        value=$(eval echo \"\$${name}\")
+        emacsclient -e "(setenv \"${name}\" \"${value}\")" >/dev/null
+    done
+}
