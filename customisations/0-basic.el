@@ -1,5 +1,9 @@
 ;; Basic customisations
 
+;; Custom customisations file
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file t)
+
 ;; Remember minibuffer history across sessions:
 (savehist-mode 1)
 
@@ -36,8 +40,7 @@
 
 ;; Desktop mode
 (desktop-save-mode 1)
-(setq desktop-path '("~/.emacs.d/" "~" "~/.emacs.d/desktop")
-      desktop-registry-registry '(("desktop" . "~/.emacs.d/desktop")))
+(setq desktop-path '("~/.emacs.d/" "~" "~/.emacs.d/desktop"))
 
 ;; Dictionary
 (setq ispell-dictionary "british")
