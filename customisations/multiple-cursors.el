@@ -1,5 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Multiple cursors
+;; https://github.com/magnars/multiple-cursors.el]]
 
 (use-package multiple-cursors
   :bind
