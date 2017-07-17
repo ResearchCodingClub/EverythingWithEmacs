@@ -13,11 +13,35 @@ You can get the =.el= files that accompany this seminar
 - Terminology/anatomy (10 minutes)
 - Installing packages (10 minutes)
 - Magit (10 minutes)
+  - Start a repo
+  - Commit something
+  - View log
+  - Make/checkout branch
+  - Merge branch
+  - Rebase?
 - Helm/Projectile (15 minutes)
+  - choosing project
+  - finding file
+  - searching project
 - Org mode (15 minutes)
+  - Headings
+  - To-do
+  - Checkboxes
+  - Check-in/out
+  - Agendas
+  - Exporting to pdf, etc.
 - C/C++/Fortran (15 minutes)
+  - etags
+  - jumping to definition
+  - compiling
+  - jump to error
+  - switching between header/implementation/test with projectile
 - Python (15 minutes)
-
+  - elpy-mode
+  - jump to definition
+  - view docstring
+  - jupyter notebooks
+  
 * Why Emacs?
 
 -  It's the best
@@ -222,32 +246,7 @@ Needs Emacs 24.4+ (not available in Ubuntu 14.04) and git 1.9+
       (("\C-cm" . magit-status)))
 #+END_SRC
 
-* Auctex
-
-[[https://www.gnu.org/software/auctex/]]
-
-** [[https://github.com/PhysicsCodingClub/EverythingWithEmacs/blob/master/customisations/3-auctex.el][=customisations/3-auctex.el=]]
-
-#+BEGIN_SRC lisp
-    (use-package tex
-      :ensure auctex
-
-      :config
-      (setq TeX-auto-save t
-            TeX-parse-self t
-            TeX-PDF-mode t)
-      (setq-default TeX-master nil)
-      (add-hook 'LaTeX-mode-hook 'turn-on-reftex))
-#+END_SRC
-
-* Auctex
-
-** Basic commands
-
--  =C-c RET=: insert macro
--  =C-c C-e=: insert environment
--  =C-u C-c C-e=: change environment
--  =C-c C-c=: run LaTeX/BibTex/View document
+* Org mode
 
 * C/C++/Fortran
 
