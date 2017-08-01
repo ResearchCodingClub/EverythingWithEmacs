@@ -1,0 +1,11 @@
+#+STARTUP: showeverything
+
+* C/C++/Fortran like languages
+
+** Basic
+
+1. Use etags to make tag files
+2. Jump between definitions
+3. Jump between references
+4. Compile
+5. Flycheck
