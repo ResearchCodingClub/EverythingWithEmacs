@@ -1,0 +1,23 @@
+#+STARTUP: showeverything
+
+* Helm and projectile
+
+** Helm
+
+1. Install helm
+2. Completion with helm
+   1. Careful with tab-complete!
+3. M-x
+4. Find files
+
+** Projectile
+
+1. Install projectile
+2. Use helm interface
+3. The do-everything command
+   1. Open project file
+   2. Open project buffer
+   3. Open other project
+4. Switch between source and header
+5. Compile project
+6. Run tests
