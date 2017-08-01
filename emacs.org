@@ -1,3 +1,5 @@
+#+STARTUP: showeverything
+
 Something a bit different this week. Working with various different
 codes in various different languages, along with writing presentations,
 talks and papers, I spend most of my day writing text, just with
