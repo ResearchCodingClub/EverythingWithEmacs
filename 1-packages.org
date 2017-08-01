@@ -1,3 +1,5 @@
+#+STARTUP: showeverything
+
 * Using packages
 
 ** Basic
@@ -9,3 +11,28 @@
 5. Put the =.use-package.= config for multiple-cursors into your ~/.emacs
    1. (Optional) Change the key-bindings to your personal preference
 6. Execute the lisp block =.C-x C-e.=
+7. Try out multiple cursors! Open [[file:multiple_cursors.txt][multiple_cursors.text]] and change
+   "test" to "function", "int" to "float", and add a semi-colon to the
+   end of each line. A couple of notes notes:
+
+   1. =.C-g.= or =.RET.= to leave multiple-cursor mode
+   2. Sometimes it will ask you if you want to run a command for all
+      cursors. Answer yes or no, and it will remember your choice
+      (stored in [[file:~/.emacs.d/.mc-lists.el][~/.emacs.d/.mc_lists.el]] by default)
+
+   Other things to try:
+
+   1. Use =.mc/insert-numbers.= to replace a, b, c, d with 0, 1, 2, 3
+   2. Use =.C-j.= or =.C-o.= to insert new lines, and add a simple
+      function body
+   3. [[http:emacsrocks.com/e13.html][emacsrocks.com/e13.html]] for more inspiration!
+
+** Advanced
+
+1. Take one of your existing package configurations and convert it to
+   =.use-package.= syntax
+   1. =.:ensure t.= to make sure the package is installed
+   2. =.:init <commands>.= for things that need to be run before
+      package is loaded
+   3. =.:config <commands>.= for things that need to be run after
+      package is loaded
