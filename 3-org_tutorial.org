@@ -1,0 +1,45 @@
+#+STARTUP: showeverything
+#+AUTHOR: Peter Hill
+
+* Org mode
+
+** TODO Basics
+
+1. =.load-file.= [[file:customisations/3-org.el][customisations/3-org.el]]
+2. Create a new file with the ".org" extension
+3. Create a headline called "Tasks". Headlines in org-mode begin with
+   one or more asterisks, indicating the level
+4. Make a second-level headline under "Tasks" using two asterisks, and
+   write a TODO item "Create new org file"
+5. Mark the TODO item done with =.org-todo.= (=.C-c C-t.=)
+   - Notice how it inserts a time-stamp?
+6. Add a few more TODO items with =.org-insert-todo-heading.=
+   (=.M-S-RET.=)
+7. Create a link using the following syntax:
+
+   : [[link][description]]
+
+   Alternatively, you can use =.org-insert-link.= (=.C-c C-l.=) which
+   will prompt you for a link type, link, and description.
+8. Open the link with =.org-open-at-point.= (=.C-c C-o.=)
+9. Cycle between overviews
+10. =.org-export-dispatch.= (=.C-c C-e.=) then "l o" to export to PDF and open
+    within Emacs
+
+** Advanced
+
+1. In the =.:config.= section for org-mode, add
+
+   : (setq org-agenda-files (list "~/org/work.org"
+   :                              "~/org/home.org"))
+
+2. In the =.:bind.= section add
+
+   : (("C-c a" . org-agenda))
+3. Use =.org-agenda.= then =.t.= (=.C-c a t.=) to view all the open
+   TODO items in your agenda files
+4. Use "t" to mark as DONE, use =.RET.= to jump to source file
+5. Move to the line under a TODO item and use =.org-schedule.= (=.C-c
+   C-s.=) to set a desired date, and then save
+6. Now use =.org-agenda.= then =.a.= (=.C-c a a.=) to get a list of
+   scheduled items
