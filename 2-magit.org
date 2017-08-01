@@ -1,0 +1,28 @@
+#+STARTUP: showeverything
+
+* Using magit
+
+** Basic
+
+1. =.load-file.= [[file:customisations/2-magit.el][customisations/2-magit.el]]
+2. =.make-directory.= /tmp/test_git (or where you like)
+3. =.dired.= (or File > Open directory) the directory you just created
+4. =.magit-status.= (=.C-c m.=), the directory should be prompted
+5. Say yes
+6. Create a file, run magit-status again
+7. See available options with =.?.=
+8. Stage file with =.s.=
+9. Make a commit with =.c c.=
+10. Make some changes to the file
+11. Stage a hunk
+12. Commit
+13. View logs
+14. Make a branch
+15. Switch between branches
+16. Merge
+17. Resolve conflicts
+18. Add remote
+
+** Advanced
+
+1. Rebase
