@@ -4,8 +4,16 @@
 
 ** Basic
 
-1. Use etags to make tag files
-2. Jump between definitions
-3. Jump between references
-4. Compile
-5. Flycheck
+1. M-x shell then make tags
+2. Jump between definitions with =.M-..=
+3. Jump between references with =.M-?.=
+4. Jump back to where you were with =.M-,.=
+5. Jump between source and header with helm-projectile-find-other-file (C-c p a)
+6. Compile with projectile-compile-project (C-c p c)
+7. Run tests with projectile-test-project (C-c p P)
+8. Flycheck-mode for basic syntax checking
+9. Company-mode for basic completion
+
+** Advanced
+
+
