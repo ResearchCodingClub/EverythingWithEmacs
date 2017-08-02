@@ -72,3 +72,8 @@
     :ensure t
     :config
     (push 'company-irony company-backends)))
+
+(use-package flycheck
+  :ensure t
+  :config
+  (add-hook 'c-mode-common-hook #'flycheck-mode))
