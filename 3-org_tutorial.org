@@ -3,7 +3,7 @@
 
 * Org mode
 
-** TODO Basics
+** Basics
 
 1. =.load-file.= [[file:customisations/3-org.el][customisations/3-org.el]]
 2. Create a new file with the ".org" extension
