@@ -1,7 +1,9 @@
+CC = gcc
+
 SOURCE = main.c say.c
 OBJECTS = $(SOURCE:.c=.o)
 
-CFLAGS = -I.
+CFLAGS = -I. -g -O0
 
 all: $(OBJECTS)
 	$(CC) $(CFLAGS) -o hello $^
