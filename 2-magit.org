@@ -20,9 +20,12 @@
 14. Make a branch
 15. Switch between branches
 16. Merge
-17. Resolve conflicts
+17. Resolve conflicts using ediff
 18. Add remote
 
 ** Advanced
 
-1. Rebase
+1. Stash
+2. Cherry-pick
+3. Rebase
+
