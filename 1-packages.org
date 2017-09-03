@@ -1,13 +1,51 @@
 #+STARTUP: showeverything
 
+* Customising Emacs
+
+Customising Emacs can be done in two main ways:
+
+1. Through the =.customize.= interface
+2. Directly through elisp
+
+When Emacs starts, it looks for a file [[file:~/.emacs][~/.emacs]] (or "~/.emacs.el",
+"~/.emacs.d/init.el") for saved customisations.
+
+See [[info:emacs#Customization][Customization]] in the manual for more info.
+
+** Customize interface
+
+1. Top-level customisations: =.M-x customize.=
+2. Go to "Environment" then "Frames" and toggle "Tool bar mode"
+3. Click "Apply" at the top to apply the settings for just this session
+
+** Elisp
+
+- Emacs core is written in C, but wrapped in elisp (Emacs Lisp)
+- Key points about elisp:
+  - Functions are written in Polish notation with function name
+    first, then arguments: =.+ 1 2.=
+  - Everything is written in a list: =.(+ 1 2).=
+  - Code and data are treated as equals, which means we often need
+    to distinguish between symbols and their values: use =.(quote x).=,
+    or simply =.'x.=
+- Elisp can be run from anywhere within Emacs!
+
+
+1. Open the file [[file:customisations/0-basic.el][customisations/0-basic.el]]
+2. Place the point (cursor) after closing brackets on the =.menu-bar-mode.= line
+3. Turn off the menu-bar by running the snippet with =.M-x eval-last-sexp.= or =.C-x C-e.=
+4. Open the file [[file:~/.emacs][~/.emacs]] (or one of the alternatives above) and copy-paste some/all of
+   the customisations there
+5. Apply the customisations with =.M-x load-file <RET> ~/.emacs.=
+
 * Using packages
 
 ** Basic
 
-1. Browse the list of packages =.(package-list-packages).=
+1. Browse the list of packages =.M-x package-list-packages.=
 2. Find "multiple-cursors" =.C-s multiple-cursors.=
-3. Mark the package for installing =.i.= or =.(package-menu-mark-install).=
-4. Install marked packages =.x.= or =.(package-menu-execute).=
+3. Mark the package for installing =.i.= or =.M-x package-menu-mark-install.=
+4. Install marked packages =.x.= or =.M-x package-menu-execute.=
 5. Put the =.use-package.= config for multiple-cursors into your ~/.emacs
    1. (Optional) Change the key-bindings to your personal preference
 6. Execute the lisp block =.C-x C-e.=

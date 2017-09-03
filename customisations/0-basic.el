@@ -1,6 +1,8 @@
 ;; Basic customisations
 
 ;; Custom customisations file
+;; We want to keep settings applied through the customize interace out
+;; of the main startup file in order to keep it clean for version control
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
 
@@ -30,15 +32,18 @@
 ;; Follow symlinks into version controlled directories
 (setq vc-follow-symlinks t)
 
-;; Turn off menu-bar, tool-bar, scroll-bar
+;; Turn off menu-bar and tool-bar
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+
+;; Turn on scroll bars
 (scroll-bar-mode nil)
 
 ;; Some nifty moving between windows
+;; Note these don't work in org-mode!
 (windmove-default-keybindings)
 
-;; Desktop mode
+;; Remember what files we had open between Emacs sessions
 (desktop-save-mode 1)
 (setq desktop-path '("~/.emacs.d/" "~" "~/.emacs.d/desktop"))
 
