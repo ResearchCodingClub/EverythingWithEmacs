@@ -4,28 +4,47 @@
 
 ** Basic
 
-1. =.load-file.= [[file:customisations/2-magit.el][customisations/2-magit.el]]
-2. =.make-directory.= /tmp/test_git (or where you like)
-3. =.dired.= (or File > Open directory) the directory you just created
-4. =.magit-status.= (=.C-c m.=), the directory should be prompted
+1. =.M-x load-file.= [[file:customisations/2-magit.el][customisations/2-magit.el]]
+2. =.M-x make-directory.= /tmp/test_git (or where you like)
+3. =.M-x dired.= (or File > Open directory) the directory you just created
+4. =.M-x magit-status.= (=.C-c m.=), the directory should be prompted
 5. Say yes
-6. Create a file, run magit-status again
+6. Create a file, run =.magit-status.= again
 7. See available options with =.?.=
 8. Stage file with =.s.=
 9. Make a commit with =.c c.=
 10. Make some changes to the file
-11. Stage a hunk
+11. Stage a hunk with =.s.=
 12. Commit
-13. View logs
-14. Make a branch
-15. Switch between branches
-16. Merge
-17. Resolve conflicts using ediff
-18. Add remote
+13. View logs with =.l l.=
+14. Make a branch with =.b c.=
+15. Make some changes
+16. Switch between branches =.b b.=
+17. Make some more changes (preferably ones that will conflict with the other branch!)
+18. Merge the other branch with =.m m.=
+19. Resolve conflicts using ediff with =.e.=
+
+
+Once you've got the hang of magit, put your .emacs under git:
+
+*** Dired
+
+1. Open the home directory in Dired with =.M-x dired <RET> ~.= or =.C-x d <RET> ~.=
+2. Hit =.+.= to create a new directory (I usually use "~/dotfiles")
+3. Move the point over ".emacs" and use =.M-x dired-do-rename.= or
+   =.R.= to rename it to "~/dotfiles/emacs" (or whatever directory you
+   just created)
+4. Move to your dotfiles directory with =.<RET>.=, and symlink your
+   .emacs back to your home directory with =.M-x dired-do-symlink.= or =.S.=
+5. Hit =.^.= to move up a level and check the symlink is correct
+6. Open [[~/.emacs]] which should now take you to "~/dotfiles/emacs"
+   (assuming you have =.vc-follow-symlinks.= set to =.t.=)
+7. Make a new repo, stage and commit the file
+8. If you have an account with a git web service, you can make a new
+   repo there, and add it as a remote with =.M a.=, then push with =.P p.=
 
 ** Advanced
 
-1. Stash
-2. Cherry-pick
-3. Rebase
+1. Cherry-pick with =.A.= while looking at a commit
+2. Rebase interactively with =.r i.=
 
