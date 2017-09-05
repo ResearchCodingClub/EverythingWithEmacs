@@ -110,6 +110,7 @@ From the manual (`C-h r`):
 ## Help functions
 
 - `C-h f` help on functions
+    - You can jump straight to the function source from this help window
 - `C-h v` help on variables
 - `C-h l` key stroke history (possibly with command names!)
 - `C-h m` help on current major mode (keybindings and useful functions)
