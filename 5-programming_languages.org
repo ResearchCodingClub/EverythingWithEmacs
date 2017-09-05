@@ -5,30 +5,30 @@
 ** Basic
 
 1. Movement across blocks:
-   1. =.C-M-f.= and =.C-M-b.= to jump *forward* and *backward* over
+   1. ~C-M-f~ and ~C-M-b~ to jump *forward* and *backward* over
       matching brackets
-   2. =.C-M-a.= and =.C-M-e.= to jump to the beginning and end of a function
-2. =.comment-dwim.= (=.M-;.=, "do what I mean") to add a comment
+   2. ~C-M-a~ and ~C-M-e~ to jump to the beginning and end of a function
+2. ~comment-dwim~ (~M-;~, "do what I mean") to add a comment
    - With a region selected, comment out region (or uncomment)
-3. =.shell.= then =.make tags.=
-4. Jump between definitions with =.xref-find-definitions.= (=.M-..=)
-5. Jump between references with =.xref-find-references.= (=.M-?.=)
-6. Jump back to where you were with =.xref-pop-marker-stack.= (=.M-,.=)
-7. Jump between source and header with =.helm-projectile-find-other-file.= (=.C-c p a.=)
-8. Compile with =.projectile-compile-project.= (=.C-c p c.=)
-9. Run tests with =.projectile-test-project.= (=.C-c p P.=)
-10. Enable =.flycheck-mode.= for basic syntax checking using the compiler
-11. Enable =.company-mode.= for more advanced completion
-12. After editing, use =.whitespace-cleanup.= to remove trailing whitespace
-    1. For C-like languages, you can also use =.clang-format-buffer.=
+3. ~shell~ then ~make tags~
+4. Jump between definitions with ~xref-find-definitions~ (~M-.~)
+5. Jump between references with ~xref-find-references~ (~M-?~)
+6. Jump back to where you were with ~xref-pop-marker-stack~ (~M-,~)
+7. Jump between source and header with ~helm-projectile-find-other-file~ (~C-c p a~)
+8. Compile with ~projectile-compile-project~ (~C-c p c~)
+9. Run tests with ~projectile-test-project~ (~C-c p P~)
+10. Enable ~flycheck-mode~ for basic syntax checking using the compiler
+11. Enable ~company-mode~ for more advanced completion
+12. After editing, use ~whitespace-cleanup~ to remove trailing whitespace
+    1. For C-like languages, you can also use ~clang-format-buffer~
 
 ** Advanced
 
-1. Launch the gdb debugger with =.gdb.=
+1. Launch the gdb debugger with ~gdb~
    1. When it asks you how to run gdb, use
-      =.gdb -i=mi --fullname ~/emacs/EverythingWithEmacs/c/hello.=
+      ~gdb -i=mi --fullname ~/emacs/EverythingWithEmacs/c/hello~
 2. Choose a line in the code and insert a breakpoint with
-   =.gud-break.= (=.C-x C-a C-b.=)
-3. =.run.= the program until it reaches the breakpoint, then =.step.=
+   ~gud-break~ (~C-x C-a C-b~)
+3. ~run~ the program until it reaches the breakpoint, then ~step~
    through the code
-4. You can =.print.= local values of variables
+4. You can ~print~ local values of variables

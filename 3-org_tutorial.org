@@ -8,7 +8,7 @@ Org is a mode for keeping notes, maintaining TODO lists, and doing
 project planning with a fast and effective plain-text system.
 #+END_QUOTE
 
-You can read the [[info:org][org-mode manual]] with =.M-x org-info.=
+You can read the [[info:org][org-mode manual]] with ~M-x org-info~
 
 ** Basics
 
@@ -17,21 +17,21 @@ You can read the [[info:org][org-mode manual]] with =.M-x org-info.=
    one or more asterisks, indicating the level
 3. Make a second-level headline under "Tasks" using two asterisks, and
    write a TODO item "Create new org file"
-4. Mark the TODO item done with =.M-x org-todo.= (=.C-c C-t.=)
+4. Mark the TODO item done with ~M-x org-todo~ (~C-c C-t~)
    - If you'd like time-stamps when you mark something as DONE, set
-     =.org-log-done.= to =.'time.= (see [[file:customisations/3-org.el][customisations/3-org.el]])
-5. Add a few more TODO items with =.M-x org-insert-todo-heading.=
-   (=.M-S-RET.=)
+     ~org-log-done~ to ~'time~ (see [[file:customisations/3-org.el][customisations/3-org.el]])
+5. Add a few more TODO items with ~M-x org-insert-todo-heading~
+   (~M-S-RET~)
 6. Create an ordered list by starting a line with "1." or "1)",
-   followed by =.M-<RET>.=. Try writing a list with out-of-order
-   numbers, then add a new item with =.M-<RET>.=
+   followed by ~M-<RET>~. Try writing a list with out-of-order
+   numbers, then add a new item with ~M-<RET>~
 7. Create an unordered list by starting a line with "-", "+" or "*"
-   - Demote an item into a sublist with =.M-<right>.=
-   - Promote with =.M-<left>.=
-   - Switch between ordered and unordered lists with =.S-<right>.=
+   - Demote an item into a sublist with ~M-<right>~
+   - Promote with ~M-<left>~
+   - Switch between ordered and unordered lists with ~S-<right>~
 8. Add some check-boxes to the unordered list with "[ ]"
    - [ ] Add some checkboxes
-   - [ ] Toggle the boxes with =.C-c C-c.=
+   - [ ] Toggle the boxes with ~C-c C-c~
    - [0/1] You can make nested check boxes with "[/]"
      - [ ] When you add a checkbox to a sub-item, the "[/]" should
        change to "[0/1]" and update when you check a box
@@ -39,30 +39,30 @@ You can read the [[info:org][org-mode manual]] with =.M-x org-info.=
 
    : [[link][description]]
 
-   Alternatively, you can use =.M-x org-insert-link.= (=.C-c C-l.=) which
+   Alternatively, you can use ~M-x org-insert-link~ (~C-c C-l~) which
    will prompt you for a link type, link, and description.
-   - You can use =.M-x org-toggle-link-display.= to toggle between
+   - You can use ~M-x org-toggle-link-display~ to toggle between
      displaying the markup or the hyperlink
-10. Open the link with =.M-x org-open-at-point.= (=.C-c C-o.=)
+10. Open the link with ~M-x org-open-at-point~ (~C-c C-o~)
 11. Cycle between overviews
-12. =.M-x org-export-dispatch.= (=.C-c C-e.=) then "l o" to export to PDF and open
+12. ~M-x org-export-dispatch~ (~C-c C-e~) then "l o" to export to PDF and open
     within Emacs
 
 ** Advanced
 
-1. In the =.:config.= section for org-mode, add org files to be used
+1. In the ~:config~ section for org-mode, add org files to be used
    for your agenda like so:
 
    : (setq org-agenda-files (list "~/org/work.org"
    :                              "~/org/home.org"))
 
-2. In the =.:bind.= section bind a key to =.org-agenda.=:
+2. In the ~:bind~ section bind a key to ~org-agenda~:
 
    : (("C-c a" . org-agenda))
-3. Use =.M-x org-agenda.= then =.t.= (=.C-c a t.=) to view all the open
+3. Use ~M-x org-agenda~ then ~t~ (~C-c a t~) to view all the open
    TODO items in your agenda files
-4. Use =.t.= to mark as DONE, use =.RET.= to jump to source file
-5. Move to the line under a TODO item and use =.M-x org-schedule.= (=.C-c
-   C-s.=) to set a desired date, and then save
-6. Now use =.M-x org-agenda.= then =.a.= (=.C-c a a.=) to get a list of
+4. Use ~t~ to mark as DONE, use ~RET~ to jump to source file
+5. Move to the line under a TODO item and use ~M-x org-schedule~ (~C-c
+   C-s~) to set a desired date, and then save
+6. Now use ~M-x org-agenda~ then ~a~ (~C-c a a~) to get a list of
    scheduled items

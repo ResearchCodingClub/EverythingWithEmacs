@@ -4,32 +4,32 @@
 
 ** Basic
 
-1. =.M-x load-file.= [[file:customisations/2-magit.el][customisations/2-magit.el]]
-2. =.M-x make-directory.= /tmp/test_git (or where you like)
-3. =.M-x dired.= (or File > Open directory) the directory you just
+1. ~M-x load-file~ [[file:customisations/2-magit.el][customisations/2-magit.el]]
+2. ~M-x make-directory~ /tmp/test_git (or where you like)
+3. ~M-x dired~ (or File > Open directory) the directory you just
    created
-4. =.M-x magit-status.= (=.C-c m.=), the directory should be prompted
+4. ~M-x magit-status~ (~C-c m~), the directory should be prompted
 5. Say yes
-6. Create a file, run =.magit-status.= again
-7. See available options with =.?.=
-8. Stage file with =.s.=
-9. Make a commit with =.c c.=
+6. Create a file, run ~magit-status~ again
+7. See available options with ~?~
+8. Stage file with ~s~
+9. Make a commit with ~c c~
 10. Make some changes to the file
-11. Try staging hunks individually with =.s.=, then commit
-12. View logs with =.l.= then =.l.= to see the log for the current
+11. Try staging hunks individually with ~s~, then commit
+12. View logs with ~l~ then ~l~ to see the log for the current
     branch
-13. Make a new branch and immediately check it out with =.b c.=
+13. Make a new branch and immediately check it out with ~b c~
 14. Make some changes and commit them
-15. Switch back to master with =.b b.=
+15. Switch back to master with ~b b~
 16. Make some more changes (preferably ones that will conflict with
     the other branch!)
-17. Merge the other branch with =.m m.=
-18. Resolve conflicts using ediff with =.e.=
+17. Merge the other branch with ~m m~
+18. Resolve conflicts using ediff with ~e~
     1. ediff pops up a new frame (a GUI window) where commands are
        entered
-    2. Use =.n.= / =.p.= to move between hunks/patches
-    3. Use =.A.= / =.B.= to apply the hunk from A/B
-    4. When you're done, hit =.q.= to quit ediff. You'll then be
+    2. Use ~n~ / ~p~ to move between hunks/patches
+    3. Use ~A~ / ~B~ to apply the hunk from A/B
+    4. When you're done, hit ~q~ to quit ediff. You'll then be
        prompted to save the file
 
 
@@ -37,23 +37,23 @@ Once you've got the hang of magit, put your .emacs under git:
 
 *** Dired
 
-1. Open the home directory in Dired with =.M-x dired <RET> ~.= or
-   =.C-x d <RET> ~.=
-2. Hit =.+.= to create a new directory (I usually use "~/dotfiles")
-3. Move the point over ".emacs" and use =.M-x dired-do-rename.= or
-   =.R.= to rename it to "~/dotfiles/emacs" (or whatever directory you
+1. Open the home directory in Dired with ~M-x dired <RET> ~~ or
+   ~C-x d <RET> ~~
+2. Hit ~+~ to create a new directory (I usually use "~/dotfiles")
+3. Move the point over ".emacs" and use ~M-x dired-do-rename~ or
+   ~R~ to rename it to "~/dotfiles/emacs" (or whatever directory you
    just created)
-4. Move to your dotfiles directory with =.<RET>.=, and symlink your
-   .emacs back to your home directory with =.M-x dired-do-symlink.= or
-   =.S.=
-5. Hit =.^.= to move up a level and check the symlink is correct
+4. Move to your dotfiles directory with ~<RET>~, and symlink your
+   .emacs back to your home directory with ~M-x dired-do-symlink~ or
+   ~S~
+5. Hit ~^~ to move up a level and check the symlink is correct
 6. Open [[~/.emacs]] which should now take you to "~/dotfiles/emacs"
-   (assuming you have =.vc-follow-symlinks.= set to =.t.=)
+   (assuming you have ~vc-follow-symlinks~ set to ~t~)
 7. Make a new repo, stage and commit the file
 8. If you have an account with a git web service, you can make a new
-   repo there, and add it as a remote with =.M a.=, then push with =.P p.=
+   repo there, and add it as a remote with ~M a~, then push with ~P p~
 
 ** Advanced
 
-1. Cherry-pick with =.A.= while looking at a commit
-2. Rebase interactively with =.r i.=
+1. Cherry-pick with ~A~ while looking at a commit
+2. Rebase interactively with ~r i~
