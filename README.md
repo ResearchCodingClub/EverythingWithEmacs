@@ -11,11 +11,11 @@ and software projects solely using Emacs.
 ## Overview
 
 0. Intro
-1. Customising Emacs and installing additional packages <1-packages.org>
-2. Interacting with git <2-magit.org>
-3. General purpose text -- notes, to-do lists, documents <3-org_tutorial.org>
-4. Navigating generic projects <5-helm_and_projectile.org>
-5. Software projects <4-c_and_friends.org>
+1. [Customising Emacs and installing additional packages](1-packages.org)
+2. [Interacting with git](2-magit.org)
+3. [General purpose text -- notes, to-do lists, documents](3-org_tutorial.org)
+4. [Navigating generic projects](4-helm_and_projectile.org)
+5. [Software projects](5-programming_languages.org)
 
 # Why Emacs?
 
