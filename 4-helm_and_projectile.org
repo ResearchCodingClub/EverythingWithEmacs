@@ -4,11 +4,21 @@
 
 ** Helm
 
-1. Install helm
-2. Completion with helm
+Helm is an incremental completion framework that allows you to quickly find what you're
+looking for, as well execute commands on multiple candidates. One of the big features is
+out of order matching using regular expressions.
+
+1. Open [[file:customisations/4-helm-projectile.el][customisations/4-helm-projectile.el]] and eval the ~helm~ config
+2. Hit ~M-x~. This starts a helm session with your command history
+3. Type "rect op" -- notice how it narrows down the candidates as you
+   type
+4. Use ~C-n~ and ~C-p~ to browse the list of candidates
+5. Hit ~<TAB>~ with a function highlighted to see the help for that
+   function
+6. Completion with helm
    1. Careful with tab-complete!
-3. M-x
-4. Find files
+7. M-x
+8. Find files
 
 ** Projectile
 
