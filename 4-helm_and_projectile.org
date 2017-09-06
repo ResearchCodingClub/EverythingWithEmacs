@@ -4,21 +4,51 @@
 
 ** Helm
 
-Helm is an incremental completion framework that allows you to quickly find what you're
-looking for, as well execute commands on multiple candidates. One of the big features is
-out of order matching using regular expressions.
+Helm is an incremental completion framework that allows you to quickly find what
+you're looking for, as well execute commands on multiple candidates. One of the
+big features is out of order matching using regular expressions.
+
+Basic usage:
+- Type parts of what you're looking for
+- Helm will search for candidates, sorting them by best match
+- Keep typing till the correct result is highlighted
+  - Alternatively, use ~C-n~ to navigate to it
+- Hit ~<RET>~ to select the currently highlighted candidate
+
+If you're used to ~<TAB>~ completion in Emacs, careful! As Helm automatically
+highlights the best match, ~<TAB>~ completion is not needed, and in this
+tutorial is instead bound to run a default action.
 
 1. Open [[file:customisations/4-helm-projectile.el][customisations/4-helm-projectile.el]] and eval the ~helm~ config
+   - This reassigns some default functions to use Helm ones instead, as well as
+     try and make the interface a little prettier
 2. Hit ~M-x~. This starts a helm session with your command history
-3. Type "rect op" -- notice how it narrows down the candidates as you
-   type
-4. Use ~C-n~ and ~C-p~ to browse the list of candidates
-5. Hit ~<TAB>~ with a function highlighted to see the help for that
+3. Type "op re" -- notice how it narrows down the candidates as you type
+   - ~open-rectangle~ should now be at the top
+4. Now try "re ^op" -- ~open-rectangle~ should now be the only candidate
+   - Notice how it shows the key binding right next to the function?
+5. Hit ~<TAB>~ with ~open-rectangle~ highlighted to see the help for that
    function
-6. Completion with helm
-   1. Careful with tab-complete!
-7. M-x
-8. Find files
+   - Press ~<TAB>~ again to close the help window
+6. Use ~M-y~ to view the kill ring
+   - Normally, ~M-y~ must be used immediately after ~C-y~ (~yank~), but
+     ~helm-show-kill-ring~ can be used at any time
+7. As well as typing patterns, you can use ~C-n~ and ~C-p~ to browse the list of
+   candidates
+8. ~C-x b~ now opens ~helm-mini~ instead of ~switch-to-buffer~
+   - As well as your open buffers, Helm also shows recently opened files, and
+     allows you to create a new empty buffer
+   - Filter by directory with "/<directory>", e.g. "/customisations" to show
+     buffers in the customisations directory
+   - Filter by mode with "*<mode>", e.g. "*org" to show org-mode buffers
+   - Filter by contents with "@<regexp>", e.g. "@cats" to show buffers
+     containing the string "cats"
+9. ~C-x f~ now opens ~helm-find-files~
+10. Use ~C-s~ from within a ~helm-find-files~ session to grep selected files
+
+
+For a more in-depth tutorial on Helm see [[http://tuhdo.github.io/helm-intro.html][tuhdo's "A Package in a league of its
+own"]]
 
 ** Projectile
 
