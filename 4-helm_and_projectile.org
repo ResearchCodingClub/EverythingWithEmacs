@@ -30,12 +30,13 @@ tutorial is instead bound to run a default action.
 5. Hit ~<TAB>~ with ~open-rectangle~ highlighted to see the help for that
    function
    - Press ~<TAB>~ again to close the help window
-6. Use ~M-y~ to view the kill ring
+6. In any Helm session, use ~C-h m~ or ~C-c ?~ to get help (~q~ to quit help)
+7. Use ~M-y~ to view the kill ring
    - Normally, ~M-y~ must be used immediately after ~C-y~ (~yank~), but
      ~helm-show-kill-ring~ can be used at any time
-7. As well as typing patterns, you can use ~C-n~ and ~C-p~ to browse the list of
+8. As well as typing patterns, you can use ~C-n~ and ~C-p~ to browse the list of
    candidates
-8. ~C-x b~ now opens ~helm-mini~ instead of ~switch-to-buffer~
+9. ~C-x b~ now opens ~helm-mini~ instead of ~switch-to-buffer~
    - As well as your open buffers, Helm also shows recently opened files, and
      allows you to create a new empty buffer
    - Filter by directory with "/<directory>", e.g. "/customisations" to show
@@ -43,21 +44,35 @@ tutorial is instead bound to run a default action.
    - Filter by mode with "*<mode>", e.g. "*org" to show org-mode buffers
    - Filter by contents with "@<regexp>", e.g. "@cats" to show buffers
      containing the string "cats"
-9. ~C-x f~ now opens ~helm-find-files~
-10. Use ~C-s~ from within a ~helm-find-files~ session to grep selected files
+10. ~C-x f~ now opens ~helm-find-files~
+    - As before, start typing to narrow down candidates
+    - Use ~<TAB>~ to descend into directories
+    - Use ~C-l~ to move up a directory
+    - Use ~C-z~ to see a list of available actions
+11. Use ~C-s~ from within a ~helm-find-files~ session to grep selected files
 
 
-For a more in-depth tutorial on Helm see [[http://tuhdo.github.io/helm-intro.html][tuhdo's "A Package in a league of its
+For a more in-depth tutorial on Helm, including how to use Helm to search
+Google, Wikipedia, and StackOverflow see [[http://tuhdo.github.io/helm-intro.html][tuhdo's "A Package in a league of its
 own"]]
 
 ** Projectile
 
-1. Install projectile
-2. Use helm interface
-3. The do-everything command
-   1. Open project file
-   2. Open project buffer
-   3. Open other project
-4. Switch between source and header
-5. Compile project
-6. Run tests
+Projectile is a package for navigating projects. Out of the box, it will
+recognise most version controlled directories (and their sub-directories) as
+projects. Combined with Helm, Projectile offers a way to almost instantly jump
+to any file in your project.
+
+1. Open [[/home/peter/Documents/PhysicsCodingClub/everythingwithemacs/customisations/4-helm-projectile.el][customisations/4-helm-projectile.el]] and eval the ~projectile~ config
+   - No major customisations this time, just install and enable Projectile and
+     the Helm interface to it
+2. The do-everything command: ~helm-projectile~ (~C-c p h~)
+   - This is similar to the ~helm-find-files~ interface, but is divided into
+     three sections:
+     1. Open project buffer
+     2. Open project file
+     3. Open other project
+   - Switch between the sections with ~<left>~ and ~<right>~ (or ~M-o~ and ~C-o~)
+   - As you visit projects, Projectile adds them its known projects list
+
+We'll be using Projectile more in the next section.
