@@ -42,14 +42,23 @@ See [[info:emacs#Customization][Customization]] in the manual for more info.
 
 ** Basic
 
-1. Browse the list of packages ~M-x package-list-packages~
-2. Find "multiple-cursors" ~C-s multiple-cursors~
-3. Mark the package for installing ~i~ or ~M-x package-menu-mark-install~
-4. Install marked packages ~x~ or ~M-x package-menu-execute~
-5. Put the ~use-package~ config for multiple-cursors into your ~/.emacs
-   1. (Optional) Change the key-bindings to your personal preference
-6. Execute the lisp block ~C-x C-e~
-7. Try out multiple cursors! Open [[file:multiple_cursors.txt][multiple_cursors.text]] and change
+Emacs has its own package management system, "package", and comes with the GNU package
+repository enabled by default. The [[https://melpa.org][melpa]] repository provides almost another 4,000
+packages. The first package we're going to install is "use-package", which provides a
+clean interface to configuring packages.
+
+1. Open [[file:customisations/1-packages.el][customisations/1-packages.el]], copy the contents into your [[file:~/.emacs][~/.emacs]], and then
+   ~load-file~ your .emacs to apply the config
+   - Don't forget to commit your changes! 
+2. Browse the list of packages ~M-x package-list-packages~
+3. Find "multiple-cursors" ~C-s multiple-cursors~
+4. Mark the package for installing ~i~ or ~M-x package-menu-mark-install~
+5. (Optional) Find a colour theme, and mark it to be installed too
+6. Install marked packages ~x~ or ~M-x package-menu-execute~
+7. Put the ~use-package~ config for multiple-cursors into your ~/.emacs
+   - (Optional) Change the key-bindings to your personal preference
+8. ~eval~ the lisp block with ~C-x C-e~
+9. Try out multiple cursors! Open [[file:multiple_cursors.txt][multiple_cursors.text]] and change
    "test" to "function", "int" to "float", and add a semi-colon to the
    end of each line. A couple of notes notes:
 
