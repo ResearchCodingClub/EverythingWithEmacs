@@ -5,7 +5,9 @@ OBJECTS = $(SOURCE:.c=.o)
 
 CFLAGS = -I. -g -O0
 
-all: $(OBJECTS)
+all: hello
+
+hello: $(OBJECTS)
 	$(CC) $(CFLAGS) -o hello $^
 
 %.o: %.c
@@ -20,3 +22,6 @@ tags: TAGS
 
 TAGS:
 	etags *.c *.h
+
+check: hello
+	./test.sh

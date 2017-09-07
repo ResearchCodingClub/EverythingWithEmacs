@@ -4,31 +4,37 @@
 
 ** Basic
 
-1. Movement across blocks:
+1. Open either [[file:c/main.c][c/main.c]] or [[file:fortran/hello.f90][fortran/hello.f90]]
+2. Movement across blocks:
    1. ~C-M-f~ and ~C-M-b~ to jump *forward* and *backward* over
       matching brackets
    2. ~C-M-a~ and ~C-M-e~ to jump to the beginning and end of a function
-2. ~comment-dwim~ (~M-;~, "do what I mean") to add a comment
+3. ~M-x comment-dwim~ (~M-;~, "do what I mean") to add a comment
    - With a region selected, comment out region (or uncomment)
-3. ~shell~ then ~make tags~
-4. Jump between definitions with ~xref-find-definitions~ (~M-.~)
-5. Jump between references with ~xref-find-references~ (~M-?~)
-6. Jump back to where you were with ~xref-pop-marker-stack~ (~M-,~)
-7. Jump between source and header with ~helm-projectile-find-other-file~ (~C-c p a~)
-8. Compile with ~projectile-compile-project~ (~C-c p c~)
-9. Run tests with ~projectile-test-project~ (~C-c p P~)
-10. Enable ~flycheck-mode~ for basic syntax checking using the compiler
-11. Enable ~company-mode~ for more advanced completion
-12. After editing, use ~whitespace-cleanup~ to remove trailing whitespace
-    1. For C-like languages, you can also use ~clang-format-buffer~
+4. ~M-x shell~ then ~make tags~
+5. Jump between definitions with ~M-x xref-find-definitions~ (~M-.~)
+6. Jump between references with ~M-x xref-find-references~ (~M-?~)
+7. Jump back to where you were with ~M-x xref-pop-marker-stack~ (~M-,~)
+8. Jump between source and header with ~M-x helm-projectile-find-other-file~ (~C-c p a~)
+9. Compile with ~M-x projectile-compile-project~ (~C-c p c~)
+   - Note that because the source code is in a subdirectory of the
+     project, you'll need to use "make -k -C c" (or "-C fortran")
+10. Run tests with ~M-x projectile-test-project~ (~C-c p P~)
+11. Enable ~M-x flycheck-mode~ for basic syntax checking using the compiler
+12. Enable ~M-x company-mode~ for more advanced completion
+13. After editing, use ~M-x whitespace-cleanup~ to remove trailing whitespace
+    1. For C-like languages, you can also use ~M-x clang-format-buffer~
 
 ** Advanced
 
-1. Launch the gdb debugger with ~gdb~
+1. Launch the gdb debugger with ~M-x gdb~
    1. When it asks you how to run gdb, use
-      ~gdb -i=mi --fullname ~/emacs/EverythingWithEmacs/c/hello~
+      ~gdb -i=mi --fullname ~/emacs/EverythingWithEmacs/c/hello~ or 
+      ~gdb -i=mi --fullname ~/emacs/EverythingWithEmacs/fortran/hello~
 2. Choose a line in the code and insert a breakpoint with
-   ~gud-break~ (~C-x C-a C-b~)
+   ~M-x gud-break~ (~C-x C-a C-b~)
 3. ~run~ the program until it reaches the breakpoint, then ~step~
    through the code
 4. You can ~print~ local values of variables
+   - For Fortran, printing arrays and derived types requires some
+     slightly annoying syntax

@@ -5,7 +5,9 @@ OBJECTS = $(SOURCE:.f90=.o)
 
 FFLAGS = -I. -g -O0
 
-all: $(OBJECTS)
+all: hello
+
+hello: $(OBJECTS)
 	$(F90) $(FFLAGS) -o hello $^
 
 %.o: %.f90
@@ -20,3 +22,6 @@ tags: TAGS
 
 TAGS:
 	etags *.f90
+
+check: hello
+	./test.sh
