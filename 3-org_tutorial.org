@@ -66,3 +66,10 @@ You can read the [[info:org][org-mode manual]] with ~M-x org-info~
    C-s~) to set a desired date, and then save
 6. Now use ~M-x org-agenda~ then ~a~ (~C-c a a~) to get a list of
    scheduled items
+
+* Other text modes
+
+Not covered in this tutorial, but for pure LaTeX, check out auctex. There's
+some useful configs in [[file:customisations/3-auctex.el][customisations/3-auctex.el]]. There's also modes for
+markdown, restructuredtext, and asciidoc, and the One Ring to bind them
+all, pandoc.
