@@ -21,9 +21,13 @@
      project, you'll need to use "make -k -C c" (or "-C fortran")
 10. Run tests with ~M-x projectile-test-project~ (~C-c p P~)
 11. Enable ~M-x flycheck-mode~ for basic syntax checking using the compiler
+    - Try writing some obviously-wrong code and saving the file
 12. Enable ~M-x company-mode~ for more advanced completion
+    - Start writing some code and watch the magic...
+    - Try adding a new function with an interesting
+      signature/prototype, and then try using the function
 13. After editing, use ~M-x whitespace-cleanup~ to remove trailing whitespace
-    1. For C-like languages, you can also use ~M-x clang-format-buffer~
+    - For C-like languages, you can also use ~M-x clang-format-buffer~
 
 ** Advanced
 
@@ -38,3 +42,34 @@
 4. You can ~print~ local values of variables
    - For Fortran, printing arrays and derived types requires some
      slightly annoying syntax
+
+* Python
+
+For Python, there is the "elpy" package, which provides a set of
+IDE-like features. Elpy implements a few of the same features as
+Projectile, but specifically for Python projects. It does need several
+Python packages to get working well with your project though.
+
+The elpy documentation is available at [[http://elpy.readthedocs.io/en/latest/index.html][elpy.readthedocs.io]]
+
+1. ~M-x load-file~ [[file:customisations/6-python.el][customisations/6-python.el]] to initialise elpy
+2. Activate the virtual environment with ~M-x pyvenv-activate <RET>
+   ~/emacs/EverythingWithEmacs/~
+   - This virtual environment has the more useful python packages
+     already installed
+   - You can check what elpy thinks is available with ~elpy-config~
+3. Open [[file:python/hello/hello.py][python/hello/hello.py]]
+4. You can jump the definition of a symbol with ~M-x
+   elpy-goto-definition~ (~M-.~)
+5. You can look up documentation for a symbol with ~M-x elpy-doc~
+   (~C-c C-d~)
+6. You can open a python shell with ~M-x elpy-shell-switch-to-shell~
+   (~C-c C-z~)
+7. You can send a region to the python shell with ~M-x
+   elpy-shell-send-region-or-buffer~ (~C-c C-c~)
+8. With flymake enabled, syntax errors will be highlighted. You can
+   jump between them with ~M-x elpy-flymake-next-error~ and ~M-x
+   elpy-flymake-next-error~ (~C-c C-n~ and ~C-c C-p~)
+9. You can run a test suite with ~M-x elpy-test~ (~C-c C-t~)
+   - You can change the test runner to use with ~M-x
+     elpy-set-test-runner~
