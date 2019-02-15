@@ -13,9 +13,10 @@
 
   :init
   (use-package ob-ipython) ; ipython mode for org-babel
-  (use-package ox-md)  ; Export org to Markdown
   
   :config
+
+  (require 'ox-md) ; Export org to Markdown
   
   (setq
    ;; The location(s) of your todo lists
